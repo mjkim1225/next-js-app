@@ -8,7 +8,7 @@ export default function Update() {
     const id = params.id;
     const [data, setData] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:9999/topics/${id}`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}topics/${id}`)
             .then(res => res.json())
             .then(data => {
                 setData(data);
@@ -20,7 +20,7 @@ export default function Update() {
             e.preventDefault();
             const title = e.target.title.value;
             const body = e.target.body.value;
-            fetch('http://localhost:9999/topics/'+id, {
+            fetch(process.env.NEXT_PUBLIC_API_URL+'topics/'+id, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
