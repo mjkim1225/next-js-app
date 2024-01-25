@@ -1,5 +1,5 @@
+import { Control } from "./Control";
 import "./globals.css";
-import Link from 'next/link';
 
 export const metadata = {
   title: "Web tutorials", // 탭에 표시되는 제목
@@ -24,9 +24,7 @@ export default async function RootLayout({ children }) {
         </ol>
         {children}
         <ul>
-          <li><Link href="create">Create</Link></li>
-          <li><Link href="update/1">Update</Link></li>
-          <li><input type="button" value="delete"></input></li>
+          <Control />
         </ul>
       </body>
     </html>

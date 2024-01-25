@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 export default function Create() {
     const router = useRouter();
-return (
+    return (
         <form onSubmit={(e) => {
             e.preventDefault();
             const title = e.target.title.value;
