@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         </ol>
         {children}
         <ul>
-          <li><a href="creat">Create</a></li>
+          <li><a href="create">Create</a></li>
           <li><a href="update/1">Update</a></li>
           <li><input type="button" value="delete"></input></li>
         </ul>
