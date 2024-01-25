@@ -18,6 +18,7 @@ return (
             }).then(res => res.json())
             .then(data => {
                 console.log(data);
+                router.refresh();
                 router.push(`/read/${data.id}`);
             })
 
