@@ -1,4 +1,5 @@
 import "./globals.css";
+import Link from 'next/link';
 
 export const metadata = {
   title: "Web tutorials", // 탭에 표시되는 제목
@@ -11,13 +12,13 @@ export default function RootLayout({ children }) {
       <body>
         <h1><a href="/">WEB</a></h1>
         <ol>
-          <li><a href="/read/1">Html</a></li>
-          <li><a href="/read/2">Css</a></li>
+          <li><Link href="/read/1">Html</Link></li>
+          <li><Link href="/read/2">Css</Link></li>
         </ol>
         {children}
         <ul>
-          <li><a href="create">Create</a></li>
-          <li><a href="update/1">Update</a></li>
+          <li><Link href="create">Create</Link></li>
+          <li><Link href="update/1">Update</Link></li>
           <li><input type="button" value="delete"></input></li>
         </ul>
       </body>
